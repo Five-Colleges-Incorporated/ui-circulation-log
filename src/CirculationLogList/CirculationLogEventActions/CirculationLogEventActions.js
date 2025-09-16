@@ -1,6 +1,7 @@
 import React, { useCallback } from 'react';
 import PropTypes from 'prop-types';
 import { FormattedMessage, useIntl } from 'react-intl';
+import { LOAN_ACTIONS } from '../constants';
 
 import {
   useStripes,
@@ -31,6 +32,7 @@ export const CirculationLogEventActions = ({
     noticePolicyId,
     templateId,
   } = {},
+  actionType,
 }) => {
   const intl = useIntl();
   const stripes = useStripes();
@@ -39,7 +41,7 @@ export const CirculationLogEventActions = ({
   const hasLoanDetails =
     getHasLoanDetails(objectType, userId, items) && stripes.hasPerm('ui-users.loans.view');
   const hasUserDetails =
-    getHasUserDetails(objectType, userId) && stripes.hasPerm('ui-users.view');
+    getHasUserDetails(objectType, userId) && actionType !== LOAN_ACTIONS.ANONYMIZE && stripes.hasPerm('ui-users.view');
   const hasFeeDetails =
     getHasFeeDetails(objectType, feeFineId, userId) && stripes.hasPerm('ui-users.feesfines.actions.all');
   const hasRequestDetails =
@@ -174,5 +176,6 @@ CirculationLogEventActions.propTypes = {
   objectType: PropTypes.string,
   items: PropTypes.arrayOf(PropTypes.object),
   referenceIds: PropTypes.object,
+  actionType: PropTypes.string,
 };
 
