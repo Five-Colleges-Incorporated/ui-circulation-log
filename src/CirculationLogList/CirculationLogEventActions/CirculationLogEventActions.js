@@ -40,6 +40,9 @@ export const CirculationLogEventActions = ({
 
   const hasLoanDetails =
     getHasLoanDetails(objectType, userId, items) && stripes.hasPerm('ui-users.loans.view');
+  // For the "Anonymized" action, do not show user details. If more than
+  // one such type of action needs this exception in the future, consider
+  // a more genreal solution.
   const hasUserDetails =
     getHasUserDetails(objectType, userId) && actionType !== LOAN_ACTIONS.ANONYMIZE && stripes.hasPerm('ui-users.view');
   const hasFeeDetails =
