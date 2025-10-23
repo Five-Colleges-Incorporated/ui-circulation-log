@@ -1,7 +1,7 @@
 import React, { useCallback } from 'react';
 import PropTypes from 'prop-types';
 import { FormattedMessage, useIntl } from 'react-intl';
-import { LOAN_ACTIONS } from '../constants';
+import { REQUEST_ACTIONS } from '../constants';
 
 import {
   useStripes,
