@@ -97,6 +97,14 @@ describe('CirculationLogListFilter', () => {
 
     const { getByText } = renderCircLogListFilter();
 
+
+    const loanFilters = getByText(loanFilterText);
+    expect(loanFilters).toBeDefined();
+
+    Object.values(LOAN_ACTIONS)
+      .forEach((loanAction) => expect(loanFilters.getByText(loanAction)).toBeDefined());
+
+
     expect(getByText(loanFilterText)).toBeDefined();
 
     Object.values(LOAN_ACTIONS)
