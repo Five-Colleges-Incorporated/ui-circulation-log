@@ -1,8 +1,7 @@
 import React from 'react';
-import { render } from '@testing-library/react';
-import user from '@testing-library/user-event';
 
-import '@folio/stripes-acq-components/test/jest/__mock__';
+import { render } from '@folio/jest-config-stripes/testing-library/react';
+import user from '@folio/jest-config-stripes/testing-library/user-event';
 
 import {
   useCirculationLogExport,
@@ -27,14 +26,14 @@ describe('CirculationLogListActions', () => {
     });
   });
 
-  it('should request export when Export action is pressed', () => {
+  it('should request export when Export action is pressed', async () => {
     const requestExport = jest.fn();
 
     useCirculationLogExport.mockReturnValue({ requestExport });
 
     const { getByTestId } = renderCirculationLogListActions({ logEventsCount: 10 });
 
-    user.click(getByTestId('export-results'));
+    await user.click(getByTestId('export-results'));
 
     expect(requestExport).toHaveBeenCalled();
   });
