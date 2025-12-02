@@ -109,10 +109,6 @@
   },
   "dependencies": {
     "@folio/stripes-acq-components": "~7.1.0",
-<<<<<<< Updated upstream
-=======
-    "dayjs": "^1.11.9",
->>>>>>> Stashed changes
     "lodash": "^4.17.5",
     "prop-types": "^15.5.10",
     "query-string": "^6.1.0",
