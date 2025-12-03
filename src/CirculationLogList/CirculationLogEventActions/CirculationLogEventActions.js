@@ -44,7 +44,7 @@ export const CirculationLogEventActions = ({
   // one such type of action needs this exception in the future, consider
   // a more genreal solution.
   const hasUserDetails =
-    getHasUserDetails(objectType, userId) && actionType !== REQUEST_ACTIONS.ANONYMIZE && stripes.hasPerm('ui-users.view');
+    getHasUserDetails(objectType, userId) && actionType !== REQUEST_ACTIONS.ANONYMIZED && stripes.hasPerm('ui-users.view');
   const hasFeeDetails =
     getHasFeeDetails(objectType, feeFineId, userId) && stripes.hasPerm('ui-users.feesfines.actions.all');
   const hasRequestDetails =
