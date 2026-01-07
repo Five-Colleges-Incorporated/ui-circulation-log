@@ -63,7 +63,7 @@ export const FEE_ACTIONS = {
 };
 
 export const REQUEST_ACTIONS = {
-  ANONYMIZED: 'Anonymized',
+  ANONYMIZED_REQUEST: 'Anonymized request',
   CANCELLED: 'Cancelled',
   CREATED: 'Created',
   PICKUP_EXPIRED: 'Pickup expired',
