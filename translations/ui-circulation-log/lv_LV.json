@@ -1,5 +1,5 @@
 {
-    "meta.title": "Circulation log",
+    "meta.title": "Cirkulācijas žurnāls",
     "logEvent.user": "User barcode",
     "logEvent.item": "Item barcode",
     "logEvent.object": "Object",
@@ -66,7 +66,7 @@
     "logEvent.item.showMore": "Show more",
     "logEvent.item.showLess": "Show less",
     "logEvent.object.N/A": "-",
-    "filter.apply": "Apply",
+    "filter.apply": "Apstiprināt",
     "logEvents.actions.export": "Export results (CSV)",
     "logEvents.actions.export.success": "Your Circulation log export has been requested. Please wait while the file is downloaded.",
     "logEvents.actions.export.error": "Something went wrong with export file request, please try again.",
